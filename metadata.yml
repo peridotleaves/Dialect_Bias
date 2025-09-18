@@ -1,0 +1,42 @@
+boolq:
+  hf_file_path: google/boolq
+  split: train
+  col_to_transform: question
+  cols_to_save: 
+    - id
+    - answer
+    - passage
+
+sciq:
+  hf_file_path: allenai/sciq
+  split: train
+  col_to_transform: question
+  cols_to_save: 
+    - id 
+    - correct_answer
+    - distractor1
+    - distractor2
+    - distractor3
+    - support
+
+mmlu: 
+  dev_file_path: dev
+  hf_file_path: hails/mmlu_no_train
+  split: test
+  col_to_transform: question
+  cols_to_save: 
+    - id 
+    - subject
+    - choices
+    - answer
+
+fineweb-edu: 
+  hf_file_path: HuggingFaceFW/fineweb-edu
+  split: train
+  col_to_transform: text
+  cols_to_save: 
+    - id 
+    - text
+    - token_count
+    - score
+
